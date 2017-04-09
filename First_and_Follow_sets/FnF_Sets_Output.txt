@@ -1,0 +1,212 @@
+
+
+ ============= FIRST SETS ==============
+
+Token value: / | FIRST =  { / }
+Token value: in | FIRST =  { in }
+Token value: and | FIRST =  { and }
+Token value: end | FIRST =  { end }
+Token value: + | FIRST =  { + }
+Token value: repeat | FIRST =  { repeat }
+Token value: ] | FIRST =  { ] }
+Token value: local | FIRST =  { local }
+Token value: String | FIRST =  { String }
+Token value: false | FIRST =  { false }
+Token value: break | FIRST =  { break }
+Token value: stat_scolon_rep | FIRST =  { while, if, Name, (, function_kw, do, repeat, for, local, epsilon }
+Token value: - | FIRST =  { - }
+Token value: return | FIRST =  { return }
+Token value: do | FIRST =  { do }
+Token value: function_kw | FIRST =  { function_kw }
+Token value: >= | FIRST =  { >= }
+Token value: ~= | FIRST =  { ~= }
+Token value: for | FIRST =  { for }
+Token value: nil | FIRST =  { nil }
+Token value: goal | FIRST =  { while, if, Name, (, function_kw, do, repeat, for, local, return, break, $ }
+Token value: then | FIRST =  { then }
+Token value: else | FIRST =  { else }
+Token value: varlist | FIRST =  { Name, ( }
+Token value: not | FIRST =  { not }
+Token value: true | FIRST =  { true }
+Token value: elseif | FIRST =  { elseif }
+Token value: dot_name_rep | FIRST =  { ., epsilon }
+Token value: ' | FIRST =  { ' }
+Token value: Name | FIRST =  { Name }
+Token value: if | FIRST =  { if }
+Token value: ) | FIRST =  { ) }
+Token value: or | FIRST =  { or }
+Token value: == | FIRST =  { == }
+Token value: until | FIRST =  { until }
+Token value: while | FIRST =  { while }
+Token value: Number | FIRST =  { Number }
+Token value: epsilon | FIRST =  { epsilon }
+Token value: * | FIRST =  { * }
+Token value: % | FIRST =  { % }
+Token value: ^ | FIRST =  { ^ }
+Token value: # | FIRST =  { # }
+Token value: <= | FIRST =  { <= }
+Token value: < | FIRST =  { < }
+Token value: > | FIRST =  { > }
+Token value: laststat_scolon_opt_opt | FIRST =  { return, break, epsilon }
+Token value: var_factor_args | FIRST =  { [, . }
+Token value: } | FIRST =  { } }
+Token value: = | FIRST =  { = }
+Token value: stat | FIRST =  { if, Name, while, (, function_kw, do, repeat, local, for }
+Token value: ( | FIRST =  { ( }
+Token value: ; | FIRST =  { ; }
+Token value: { | FIRST =  { { }
+Token value: [ | FIRST =  { [ }
+Token value: functioncall | FIRST =  { Name, ( }
+Token value: : | FIRST =  { : }
+Token value: , | FIRST =  { , }
+Token value: . | FIRST =  { . }
+Token value: .. | FIRST =  { .. }
+Token value: stat_factor_for_args | FIRST =  { =, ,, in }
+Token value: ... | FIRST =  { ... }
+Token value: laststat | FIRST =  { return, break }
+Token value: \ | FIRST =  { \ }
+Token value: $ | FIRST =  { $ }
+Token value: var | FIRST =  { Name, ( }
+Token value: chunk | FIRST =  { if, Name, while, (, function_kw, do, repeat, local, for, return, break, epsilon }
+Token value: scolon_opt | FIRST =  { ;, epsilon }
+Token value: comma_name_rep | FIRST =  { ,, epsilon }
+Token value: stat_factor_local_args | FIRST =  { function_kw, Name }
+Token value: elseif_exp_then_chunk_rep | FIRST =  { elseif, epsilon }
+Token value: else_chunk_opt | FIRST =  { else, epsilon }
+Token value: comma_exp_opt | FIRST =  { ,, epsilon }
+Token value: equal_explist_opt | FIRST =  { =, epsilon }
+Token value: function | FIRST =  { function_kw }
+Token value: prefixexp | FIRST =  { Name, ( }
+Token value: tableconstructor | FIRST =  { { }
+Token value: unop | FIRST =  { -, not, # }
+Token value: exp | FIRST =  { function_kw, nil, String, false, Number, true, ..., Name, (, {, -, #, not }
+Token value: exp_comma_rep | FIRST =  { nil, function_kw, Number, String, false, true, ..., Name, (, {, -, #, not, epsilon }
+Token value: explist | FIRST =  { function_kw, nil, String, false, Number, true, ..., Name, (, {, -, #, not }
+Token value: explist_opt | FIRST =  { nil, function_kw, Number, String, false, true, ..., Name, (, {, -, #, not, epsilon }
+Token value: funcname | FIRST =  { Name }
+Token value: colon_name_opt | FIRST =  { :, epsilon }
+Token value: comma_var_rep | FIRST =  { ,, epsilon }
+Token value: var_prime | FIRST =  { [, ., epsilon }
+Token value: binop | FIRST =  { <=, +, %, -, .., *, /, ^, <, >, >=, ~=, ==, and, or }
+Token value: parlist | FIRST =  { Name, ... }
+Token value: exp_prime | FIRST =  { +, <=, -, %, *, .., /, ^, <, >, ~=, >=, ==, and, or, epsilon }
+Token value: args | FIRST =  { (, {, String }
+Token value: fc_factor_args | FIRST =  { (, {, String, : }
+Token value: fc_prime | FIRST =  { [, {, ., (, String, :, epsilon }
+Token value: fc_factor_braced_exp_args | FIRST =  { [, {, ., (, String, : }
+Token value: funcbody | FIRST =  { ( }
+Token value: parlist_opt | FIRST =  { Name, ..., epsilon }
+Token value: comma_varargs_opt | FIRST =  { ,, epsilon }
+Token value: field | FIRST =  { [, Name, nil, function_kw, Number, String, false, true, ..., (, {, -, #, not }
+Token value: fieldlist | FIRST =  { [, Name, function_kw, nil, String, false, Number, true, ..., (, {, -, #, not }
+Token value: fieldlist_opt | FIRST =  { [, Name, nil, function_kw, Number, String, false, true, ..., (, {, -, #, not, epsilon }
+Token value: fieldsep | FIRST =  { ,, ; }
+Token value: fieldsep_field_rep | FIRST =  { ,, ;, epsilon }
+Token value: fieldsep_opt | FIRST =  { ,, ;, epsilon }
+
+
+ =======================================
+
+
+
+ ============= FOLLOW SETS ==============
+
+Token value: goal | FOLLOW = { $ }
+Token value: funcname | FOLLOW = { ( }
+Token value: else_chunk_opt | FOLLOW = { end }
+Token value: args | FOLLOW = { [ ; { repeat end + . ( String : while if Name ~= >= do function_kw for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+Token value: parlist_opt | FOLLOW = { ) }
+Token value: explist_opt | FOLLOW = { ) end ; $ elseif until else }
+Token value: varlist | FOLLOW = { = }
+Token value: comma_exp_opt | FOLLOW = { do }
+Token value: binop | FOLLOW = { nil function_kw Number false String true ... Name ( { - # not }
+Token value: elseif_exp_then_chunk_rep | FOLLOW = { else end }
+Token value: function | FOLLOW = { <= end repeat + % break - .. * / ^ < > function_kw do ~= >= until == and ) or then , local ] ; Name if while ( for return elseif else $ } }
+Token value: fieldlist_opt | FOLLOW = { } }
+Token value: unop | FOLLOW = { nil function_kw Number false String true ... Name ( { - # not }
+Token value: colon_name_opt | FOLLOW = { ( }
+Token value: comma_var_rep | FOLLOW = { = }
+Token value: fieldsep_field_rep | FOLLOW = { , ; } }
+Token value: parlist | FOLLOW = { ) }
+Token value: explist | FOLLOW = { do function_kw ; repeat end while if Name ( for local return until elseif break else $ ) }
+Token value: exp_prime | FOLLOW = { do >= ~= function_kw ) or then , % break - local ] <= end repeat + * .. / ^ < > until == and ; Name if while ( for return elseif else $ } }
+Token value: exp_comma_rep | FOLLOW = { nil function_kw Number false String true ... Name ( { - # not }
+Token value: comma_varargs_opt | FOLLOW = { ) }
+Token value: fieldlist | FOLLOW = { } }
+Token value: fieldsep_opt | FOLLOW = { } }
+Token value: scolon_opt | FOLLOW = { Name if while ( do function_kw end repeat local for return until elseif break else $ }
+Token value: fieldsep | FOLLOW = { [ Name function_kw nil false String Number true ... ( { - # not } }
+Token value: chunk | FOLLOW = { $ end elseif until else }
+Token value: laststat_scolon_opt_opt | FOLLOW = { $ end elseif until else }
+Token value: exp | FOLLOW = { or ) function_kw ~= >= do then , % break - local ] <= end repeat + * .. / ^ < > until == and ; Name if while ( for return elseif else $ } }
+Token value: var_factor_args | FOLLOW = { ; { [ . ( break - String : , % } = + repeat end <= .. * / ^ < > function_kw do ~= >= until == and ) or then local ] Name if while for return elseif else $ }
+Token value: stat_scolon_rep | FOLLOW = { elseif until return else break $ end }
+Token value: fc_factor_args | FOLLOW = { + end repeat { ; [ . ( String : while if Name ~= >= do function_kw for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+Token value: stat | FOLLOW = { end repeat ; Name if while ( do function_kw for local return until elseif break else $ }
+Token value: stat_factor_for_args | FOLLOW = { ; repeat end while if Name ( function_kw do for local return until elseif break else $ }
+Token value: stat_factor_local_args | FOLLOW = { ; repeat end while if Name ( function_kw do for local return until elseif break else $ }
+Token value: equal_explist_opt | FOLLOW = { end repeat ; Name if while ( do function_kw for local return until elseif break else $ }
+Token value: laststat | FOLLOW = { end ; $ elseif until else }
+Token value: dot_name_rep | FOLLOW = { : ( }
+Token value: field | FOLLOW = { , ; } }
+Token value: prefixexp | FOLLOW = { <= end repeat + % break - .. * / ^ < > function_kw do ~= >= until == and ) or then , local ] ; Name if while ( for return elseif else $ } }
+Token value: var | FOLLOW = { , - break % } = + repeat end <= .. * / ^ < > function_kw do ~= >= until == and ) or then local ] ; Name if while ( for return elseif else $ }
+Token value: fc_prime | FOLLOW = { [ end repeat + ; . Name if while ( ~= >= do function_kw for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+Token value: var_prime | FOLLOW = { ( ; { } = % break - String : , + repeat end <= .. * / ^ < > function_kw do ~= >= until == and ) or then local ] Name if while for return elseif else $ }
+Token value: functioncall | FOLLOW = { ; + repeat end [ . while if Name ( ~= >= do function_kw for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+Token value: fc_factor_braced_exp_args | FOLLOW = { [ end repeat + ; . Name if while ( ~= >= do function_kw for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+Token value: comma_name_rep | FOLLOW = { Name if while in = , end repeat ; ( function_kw do for local return until elseif break else $ ) }
+Token value: funcbody | FOLLOW = { ; + repeat end while if Name ( ~= >= function_kw do for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+Token value: tableconstructor | FOLLOW = { <= end repeat + % break - .. * / ^ < > function_kw do ~= >= until == and ) or then , local ] { ; Name if while ( for return elseif else $ } [ . String : }
+
+
+ ============= FIRSTPLUS SETS ==============
+
+
+FIRST_PLUS(goal) = { while Name if ( do function_kw repeat for local return break $ }
+FIRST_PLUS(chunk) = { Name if while ( do function_kw end repeat local for return break $ until elseif else }
+FIRST_PLUS(exp) = { function_kw nil false String Number true ... Name ( { - # not }
+FIRST_PLUS(var_factor_args) = { [ . }
+FIRST_PLUS(laststat_scolon_opt_opt) = { elseif until return else break $ end }
+FIRST_PLUS(fc_factor_args) = { ( { String : }
+FIRST_PLUS(stat_scolon_rep) = { while Name if ( do function_kw end repeat for local return until elseif break else $ }
+FIRST_PLUS(fieldsep_opt) = { , ; } }
+FIRST_PLUS(scolon_opt) = { repeat end ; while if Name ( function_kw do local for return until elseif break else $ }
+FIRST_PLUS(stat) = { Name if while ( do function_kw repeat local for }
+FIRST_PLUS(binop) = { <= + % - .. * / ^ < > ~= >= == and or }
+FIRST_PLUS(function) = { function_kw }
+FIRST_PLUS(elseif_exp_then_chunk_rep) = { elseif else end }
+FIRST_PLUS(stat_factor_for_args) = { = , in }
+FIRST_PLUS(stat_factor_local_args) = { function_kw Name }
+FIRST_PLUS(args) = { ( { String }
+FIRST_PLUS(else_chunk_opt) = { else end }
+FIRST_PLUS(varlist) = { Name ( }
+FIRST_PLUS(comma_exp_opt) = { , do }
+FIRST_PLUS(equal_explist_opt) = { = ; repeat end while if Name ( do function_kw for local return until elseif break else $ }
+FIRST_PLUS(laststat) = { return break }
+FIRST_PLUS(parlist_opt) = { Name ... ) }
+FIRST_PLUS(explist_opt) = { nil function_kw Number false String true ... Name ( ; { - # not ) end $ until elseif else }
+FIRST_PLUS(funcname) = { Name }
+FIRST_PLUS(dot_name_rep) = { . : ( }
+FIRST_PLUS(colon_name_opt) = { : ( }
+FIRST_PLUS(fieldsep_field_rep) = { , ; } }
+FIRST_PLUS(comma_var_rep) = { , = }
+FIRST_PLUS(fc_prime) = { + repeat end ; { [ . ( String : Name if while ~= >= do function_kw for ] local return == until elseif - break else $ <= % .. * / ^ < > and ) or then , } }
+FIRST_PLUS(var) = { Name ( }
+FIRST_PLUS(var_prime) = { { ; [ . ( break - % = } String : , + repeat end <= .. * / ^ < > function_kw do ~= >= until == and ) or then local ] Name if while for return elseif else $ }
+FIRST_PLUS(comma_name_rep) = { , in while if Name = ; repeat end ( function_kw do for local return until elseif break else $ ) }
+FIRST_PLUS(parlist) = { Name ... }
+FIRST_PLUS(exp_prime) = { end repeat + <= break - % * .. / ^ < > do function_kw >= ~= until == and ) or then , local ] ; Name if while ( for return elseif else $ } }
+FIRST_PLUS(explist) = { function_kw nil false String Number true ... Name ( { - # not }
+FIRST_PLUS(exp_comma_rep) = { nil function_kw Number false String true ... Name ( { - # not }
+FIRST_PLUS(prefixexp) = { Name ( }
+FIRST_PLUS(functioncall) = { Name ( }
+FIRST_PLUS(fc_factor_braced_exp_args) = { { [ . ( String : }
+FIRST_PLUS(funcbody) = { ( }
+FIRST_PLUS(comma_varargs_opt) = { , ) }
+FIRST_PLUS(tableconstructor) = { { }
+FIRST_PLUS(fieldlist_opt) = { [ Name nil function_kw Number false String true ... ( { - # not } }
+FIRST_PLUS(fieldlist) = { [ Name function_kw nil false String Number true ... ( { - # not }
+FIRST_PLUS(field) = { [ Name nil function_kw Number false String true ... ( { - # not }
+FIRST_PLUS(fieldsep) = { , ; }
+FIRST_PLUS(unop) = { - # not }

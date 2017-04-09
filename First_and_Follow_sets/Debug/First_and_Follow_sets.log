@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\christian\documents\visual studio 2015\projects\first_and_follow_sets\first_and_follow_sets\main.cpp(1): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\christian\documents\visual studio 2015\projects\first_and_follow_sets\first_and_follow_sets\main.cpp(760): warning C4800: 'unsigned int': forcing value to bool 'true' or 'false' (performance warning)
+  First_and_Follow_sets.vcxproj -> C:\Users\Christian\Documents\Visual Studio 2015\Projects\First_and_Follow_sets\Debug\First_and_Follow_sets.exe
+  First_and_Follow_sets.vcxproj -> C:\Users\Christian\Documents\Visual Studio 2015\Projects\First_and_Follow_sets\Debug\First_and_Follow_sets.pdb (Partial PDB)

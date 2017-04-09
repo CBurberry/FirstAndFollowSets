@@ -1,0 +1,104 @@
+goal ::= chunk $ !
+chunk ::= stat_scolon_rep laststat_scolon_opt_opt !
+stat_scolon_rep ::= stat scolon_opt stat_scolon_rep 
+				  | epsilon !
+scolon_opt ::= ; 
+			 | epsilon !
+laststat_scolon_opt_opt ::= laststat scolon_opt 
+						  | epsilon !
+stat ::= varlist = explist 
+	   | functioncall 
+	   | do chunk end 
+	   | while exp do chunk end 
+	   | repeat chunk until exp 
+	   | if exp then chunk elseif_exp_then_chunk_rep else_chunk_opt end 
+	   | for Name stat_factor_for_args 
+	   | function_kw funcname funcbody 
+	   | local stat_factor_local_args !
+stat_factor_for_args ::= = exp , exp comma_exp_opt do chunk end 
+						| comma_name_rep in explist do chunk end !
+stat_factor_local_args ::= function_kw Name funcbody 
+						 | Name comma_name_rep  equal_explist_opt !
+elseif_exp_then_chunk_rep ::= elseif exp then chunk elseif_exp_then_chunk_rep 
+							| epsilon !
+else_chunk_opt ::= else chunk 
+				 | epsilon !
+comma_exp_opt ::= , exp 
+				| epsilon !
+equal_explist_opt ::= = explist 
+					| epsilon !
+laststat ::= return explist_opt 
+		   | break !
+explist_opt ::= explist 
+			  | epsilon !
+funcname ::= Name dot_name_rep  colon_name_opt !
+dot_name_rep ::= . Name dot_name_rep 
+			   | epsilon !
+colon_name_opt ::= : Name 
+				 | epsilon !
+varlist ::= var comma_var_rep !
+comma_var_rep ::= , var comma_var_rep 
+				| epsilon !
+var ::= Name var_prime 
+	  | functioncall var_factor_args var_prime 
+	  | ( exp ) var_factor_args var_prime !
+var_prime ::= var_factor_args var_prime 
+			| epsilon !
+var_factor_args ::= [ exp ] 
+				  | . Name !
+comma_name_rep ::= , Name comma_name_rep 
+				 | epsilon !
+explist ::= exp_comma_rep exp !
+exp_comma_rep ::= exp , exp_comma_rep 
+				| epsilon !
+exp ::= nil exp_prime 
+	  | false exp_prime 
+	  | true exp_prime 
+	  | Number exp_prime 
+	  | String exp_prime 
+	  | ... exp_prime 
+	  | function exp_prime 
+	  | prefixexp exp_prime 
+	  | tableconstructor exp_prime 
+	  | unop exp exp_prime !
+exp_prime ::= binop exp exp_prime 
+			| epsilon !
+prefixexp ::= var 
+			| functioncall 
+			| ( exp ) !
+functioncall ::= Name var_prime fc_factor_args fc_prime 
+			   | ( exp ) fc_factor_braced_exp_args !   
+fc_prime ::= var_factor_args var_prime fc_factor_args fc_prime 
+		   | fc_factor_args fc_prime 
+		   | epsilon !
+fc_factor_braced_exp_args ::= var_factor_args var_prime fc_factor_args fc_prime 
+							| fc_factor_args fc_prime !
+fc_factor_args ::= args 
+				 | : Name args !
+args ::=  ( explist_opt ) 
+	   | tableconstructor 
+	   | String !
+function ::= function_kw funcbody !
+funcbody ::= ( parlist_opt ) chunk end !
+parlist_opt ::= parlist 
+			  | epsilon !
+parlist ::= Name comma_name_rep comma_varargs_opt 
+		  | ... !
+comma_varargs_opt ::= , ... 
+					| epsilon !
+tableconstructor ::= { fieldlist_opt } !
+fieldlist_opt ::= fieldlist 
+				| epsilon !
+fieldlist ::= field fieldsep_field_rep fieldsep_opt !
+fieldsep_field_rep ::= fieldsep field fieldsep_field_rep 
+					 | epsilon !
+fieldsep_opt ::= fieldsep 
+			   | epsilon !
+field ::= [ exp ] = exp 
+		| Name = exp 
+		| exp !
+fieldsep ::= , | ; !
+binop ::= + | - | * | / | ^ | % | .. 
+	 | < | <= | > | >= | == | ~= 
+	 | and | or !
+unop ::= - | not | # !

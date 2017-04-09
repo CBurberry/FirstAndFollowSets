@@ -1,0 +1,12 @@
+goal ::= expr $ !
+expr ::= term expr_p !
+expr_p ::= + term expr_p 
+		| - term expr_p 
+		| epsilon !
+term ::= factor term_p !
+term_p ::= * factor term_p 
+		| / factor term_p 
+		| epsilon !
+factor ::= ( expr ) 
+		| num 
+		| name !
