@@ -1051,12 +1051,12 @@ int main()
 	ofile.open("FnF_Sets_Output.txt", ios::trunc);
 
 	ifstream ifile;
-	ifile.open("BNF_LUA2_input.txt");
+	ifile.open("language_input.txt");
 	char line[MAX_LINE_LENGTH];
 	string str;
 
 	ifstream terminalsIn;
-	terminalsIn.open("input_terminals.txt");
+	terminalsIn.open("terminals_input.txt");
 
 	//SymbolList becomes populated with filled symboldata and productions whos rhs' are grammar_element(0,2, buffer).
 	symbolList = add_all_terminals(terminalsIn);
